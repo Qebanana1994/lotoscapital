@@ -1,0 +1,412 @@
+Uri: https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\npm\bootstrap@4.6.0\dist\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\npm\popper.js@1.16.1\dist\umd\popper.min.js
+Content Type: application/javascript
+
+Uri: https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\iconify-icon\1.0.0-beta.3\iconify-icon.min.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap
+File Name: C:\Downloaded Web Sites\swiftly.zone\css2
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap
+File Name: C:\Downloaded Web Sites\swiftly.zone\css
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/karla/v15/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.woff2
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\karla\v15\qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lK.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/materialicons/v76/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\materialicons\v76\flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aX8.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aX8.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\montserrat\v26\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpg.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\orbitron\v31\yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyKS6xpg.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\orbitron\v31\yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyKS6xpg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nymymxpg.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\orbitron\v31\yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nymymxpg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyxSmxpg.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\orbitron\v31\yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyxSmxpg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1ny_Cmxpg.ttf
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\orbitron\v31\yMJMMIlzdpvBhQQL_SC3X9yhF25-T1ny_Cmxpg.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\roboto\v20\KFOmCnqEu92Fr1Mu4mxK.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/robotocondensed/v25/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYbw.woff2
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\robotocondensed\v25\ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYbw.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/robotocondensed/v25/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2
+File Name: C:\Downloaded Web Sites\swiftly.zone\s\robotocondensed\v25\ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2
+Content Type: font/woff2
+
+Uri: https://swiftly.zone/
+File Name: C:\Downloaded Web Sites\swiftly.zone\index.htm
+Content Type: text/html
+
+Uri: https://swiftly.zone/?a=forgot_password
+File Name: C:\Downloaded Web Sites\swiftly.zone\index-3.htm
+Content Type: text/html
+
+Uri: https://swiftly.zone/?a=login
+File Name: C:\Downloaded Web Sites\swiftly.zone\index-1.htm
+Content Type: text/html
+
+Uri: https://swiftly.zone/?a=signup
+File Name: C:\Downloaded Web Sites\swiftly.zone\index-2.htm
+Content Type: text/html
+
+Uri: https://swiftly.zone/build/0.2c3efa47.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\0.2c3efa47.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/build/app.49b7117e.css
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\app.49b7117e.css
+Content Type: text/css
+
+Uri: https://swiftly.zone/build/app.f25b37c3.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\app.f25b37c3.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/build/img/benefits-card-bg.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\img\benefits-card-bg.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/build/img/bonus-promotions/bonus-promotions-header.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\img\bonus-promotions\bonus-promotions-header.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/build/img/error.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\img\error.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/img/error24x24.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\img\error24x24.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/img/lock.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\img\lock.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/build/jquery.toast.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\jquery.toast.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/build/jquery1.toast.min.css
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\jquery1.toast.min.css
+Content Type: text/css
+
+Uri: https://swiftly.zone/build/runtime.d94b3b43.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\runtime.d94b3b43.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/build/svg/latest-game-statistics/all-logo-color.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\svg\latest-game-statistics\all-logo-color.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/svg/latest-game-statistics/casino-logo-color.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\svg\latest-game-statistics\casino-logo-color.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/svg/latest-game-statistics/poker-logo-color.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\svg\latest-game-statistics\poker-logo-color.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/svg/latest-game-statistics/sport-logo-color.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\svg\latest-game-statistics\sport-logo-color.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/svg/payment_methods.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\svg\payment_methods.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/build/svg/telegram_background.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\build\svg\telegram_background.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/bundles/fosjsrouting/js/router.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\bundles\fosjsrouting\js\router.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/images/btc.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\btc.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/images/download-icons.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\download-icons.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/images/epc.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\epc.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/images/go.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\go.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/images/ltc.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\ltc.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/images/trx.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\trx.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/images/usdt.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\images\usdt.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/img/about-us.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\about-us.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/favicon.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\favicon.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/free-account.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\free-account.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/img/logo.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\logo.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/logo2.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\logo2.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/main.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\main.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/make-deposit.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\make-deposit.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/img/p1.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\p1.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/p2.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\p2.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/p3.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\p3.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/plan-1.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\plan-1.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/plan-2.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\plan-2.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/plan-3.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\plan-3.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/plan-4.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\plan-4.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/plan-5.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\plan-5.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/slide1.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\slide1.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/img/withdrawal.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\img\withdrawal.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/js/routing?callback=fos.Router.setData
+File Name: C:\Downloaded Web Sites\swiftly.zone\js\routing
+Content Type: 
+
+Uri: https://swiftly.zone/legal/comp-cert.pdf
+File Name: C:\Downloaded Web Sites\swiftly.zone\legal\comp-cert.pdf
+Content Type: application/pdf
+
+Uri: https://swiftly.zone/legal/cookie.pdf
+File Name: C:\Downloaded Web Sites\swiftly.zone\legal\cookie.pdf
+Content Type: application/pdf
+
+Uri: https://swiftly.zone/legal/privacy.pdf
+File Name: C:\Downloaded Web Sites\swiftly.zone\legal\privacy.pdf
+Content Type: application/pdf
+
+Uri: https://swiftly.zone/legal/rules.pdf
+File Name: C:\Downloaded Web Sites\swiftly.zone\legal\rules.pdf
+Content Type: application/pdf
+
+Uri: https://swiftly.zone/styles/img/arrows-expand.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\img\arrows-expand.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/styles/js/calc2.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\js\calc2.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/js/jquery-2.2.4.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\js\jquery-2.2.4.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/assets/images/design_components.svg
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\assets\images\design_components.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/styles/smartcoins/assets/images/uk.png
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\assets\images\uk.png
+Content Type: image/png
+
+Uri: https://swiftly.zone/styles/smartcoins/css/app-dark.css
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\app-dark.css
+Content Type: text/css
+
+Uri: https://swiftly.zone/styles/smartcoins/css/custom.css
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\custom.css
+Content Type: text/css
+
+Uri: https://swiftly.zone/styles/smartcoins/css/feather.css
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\feather.css
+Content Type: text/css
+
+Uri: https://swiftly.zone/styles/smartcoins/css/images/layers-2x.html
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\images\layers-2x.html
+Content Type: text/html
+
+Uri: https://swiftly.zone/styles/smartcoins/css/images/layers.html
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\images\layers.html
+Content Type: text/html
+
+Uri: https://swiftly.zone/styles/smartcoins/css/images/marker-icon.html
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\images\marker-icon.html
+Content Type: text/html
+
+Uri: https://swiftly.zone/styles/smartcoins/css/simplebar.css
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\css\simplebar.css
+Content Type: text/css
+
+Uri: https://swiftly.zone/styles/smartcoins/fonts/featherb9d9.eot?29jl7i
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\fonts\featherb9d9.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://swiftly.zone/styles/smartcoins/fonts/featherb9d9.svg?29jl7i
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\fonts\featherb9d9.svg
+Content Type: image/svg+xml
+
+Uri: https://swiftly.zone/styles/smartcoins/fonts/featherb9d9.ttf?29jl7i
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\fonts\featherb9d9.ttf
+Content Type: font/ttf
+
+Uri: https://swiftly.zone/styles/smartcoins/fonts/featherb9d9.woff?29jl7i
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\fonts\featherb9d9.woff
+Content Type: font/woff
+
+Uri: https://swiftly.zone/styles/smartcoins/js/apps.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\apps.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/chroma.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\chroma.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/config.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\config.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/daterangepicker.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\daterangepicker.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/ifbreakpoint.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\ifbreakpoint.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/jquery.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/jquery.stickOnScroll.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\jquery.stickOnScroll.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/moment.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\moment.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/popper.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\popper.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/simplebar.min.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\simplebar.min.js
+Content Type: application/javascript
+
+Uri: https://swiftly.zone/styles/smartcoins/js/theme.switcher.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\styles\smartcoins\js\theme.switcher.js
+Content Type: application/javascript
+
+Uri: https://widget-v4.tidiochat.com/1_210_0/static/js/render.e4f8d83cd67e45b8afc7.js
+File Name: C:\Downloaded Web Sites\swiftly.zone\1_210_0\static\js\render.e4f8d83cd67e45b8afc7.js
+Content Type: application/javascript
+
