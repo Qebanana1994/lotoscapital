@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Statistic;
 use Carbon\Carbon;
 use App\Lib\HyipLab;
 use App\Models\Plan;
@@ -292,6 +293,11 @@ class CronController extends Controller
             $notify[] = ['success', keyToTitle(request()->alias) . ' executed successfully'];
             return back()->withNotify($notify);
         }
+    }
+
+    public function updateStatistics()
+    {
+        Statistic::updateStatistics();
     }
 
 }

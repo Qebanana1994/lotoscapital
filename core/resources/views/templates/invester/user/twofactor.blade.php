@@ -27,7 +27,7 @@
                                 </h6>
 
                                 <div class="form-group mb-3 mx-auto text-center">
-                                    <img class="mx-auto" src="{{$qrCodeUrl}}">
+                                    <img class="mx-auto" src="{{ $qrUrl }}">
                                 </div>
 
                                 <div class="form-group mb-3">

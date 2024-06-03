@@ -11,7 +11,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            
+
             <div class="accordion table--acordion" id="transactionAccordion">
                 @forelse($withdraws as $withdraw)
                     <div class="accordion-item transaction-item">
@@ -34,12 +34,13 @@
                                     @endif
                                     <div class="content">
                                         <h6 class="trans-title">{{ __(@$withdraw->method->name) }}</h6>
-                                        <span class="text-muted font-size--14px mt-2">{{showDateTime($withdraw->created_at,'M d Y @g:i:a')}}</span>
+                                        <span class="text-muted font-size--14px mt-2">{{showDateTime($withdraw->created_at)}}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-4 col-12 order-sm-2 order-3 content-wrapper mt-sm-0 mt-3">
                                 <p class="text-muted font-size--14px"><b>#{{ $withdraw->trx }}</b></p>
+                                <p class="text-muted font-size--14px"><b>{{ $withdraw->withdraw_information[0]->value }}</b></p>
                             </div>
                             <div class="col-lg-4 col-sm-3 col-4 order-sm-3 order-2 text-end amount-wrapper">
                                 <p><b>{{ showAmount($withdraw->amount ) }} {{ $general->cur_text }}</b></p>

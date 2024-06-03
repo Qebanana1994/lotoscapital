@@ -1,14 +1,17 @@
 @extends('admin.layouts.app')
 @section('panel')
+    <style>
+        .hidden {
+            display: none !important;
+        }
+    </style>
     <div class="col-lg-12">
-
-
-                <div class="d-flex flex-wrap justify-content-end gap-2 align-items-right breadcrumb-plugins py-2">
-                    <div class="flex-right">
-                        <button data-bs-toggle="modal" data-bs-target="#addReferModal" class="btn btn--success btn--shadow w-100 btn-lg bal-btn" data-act="add">
-                            <i class="las la-plus-circle"></i> Добавить реферал</button>
-                    </div>
-                </div>
+        <div class="d-flex flex-wrap justify-content-end gap-2 align-items-right breadcrumb-plugins py-2">
+            <div class="flex-right">
+                <button data-bs-toggle="modal" data-bs-target="#addReferModal" class="btn btn--success btn--shadow w-100 btn-lg bal-btn" data-act="add">
+                    <i class="las la-plus-circle"></i> Добавить реферала</button>
+            </div>
+        </div>
         <div class="card b-radius--10 ">
             <div class="card-body p-0">
                 <div class="table-responsive--sm table-responsive">
@@ -23,19 +26,28 @@
                             <th>Активно</th>
                             <th>Вложили</th>
                             <th>Реферальные</th>
+                            <th>Действие</th>
                         </tr>
                         </thead>
                         <tbody>
 
                         @forelse($referrals as $refer)
+                            @php
+                                $refsByRefer = \App\Models\User::query()->with('referrals')->find($refer->user_id)->referrals;
+                                $activeRefs = 0;
+                                foreach ($refsByRefer as $ref) {
+                                    $depCnt = \App\Models\User::query()->with('deposits')->find($ref->id)->deposits->count();
+                                    if ($depCnt) $activeRefs += 1;
+                                }
+                            @endphp
                         <tr>
                             <td>{{$refer->user->fullname}}
                                 <a href="{{ route('admin.users.detail', $refer->user_id) }}"><span>@</span>{{ $refer->user->username }}</a>
                             </td>
                             <td>{{ route('home') }}?reference={{$refer->user->username}}</td>
                             <td>{{$refer->hitCount}}</td>
-                            <td>{{\App\Models\User::query()->where('ref_by', $refer->user_id)->count()}}</td>
-                            <td>Активно</td>
+                            <td>{{ $refsByRefer->count() }}</td>
+                            <td>{{ $activeRefs }}</td>
                             @php
                                 $refs = \App\Models\Referral::query()->get();
                                 $levels = array();
@@ -86,6 +98,7 @@
                             @endphp
                             <td>{{$data}}</td>
                             <td>{{$firstLevel}}</td>
+                            <td><a href="{{ route('admin.referrals.destroy', $refer->id) }}" class="btn btn-primary btn-danger">Delete</a></td>
                         </tr>
                         @empty
                             <tr>
@@ -112,20 +125,23 @@
                         <i class="las la-times"></i>
                     </button>
                 </div>
-                <form action="{{ route('admin.add-ref') }}" method="POST" class="verify-gcaptcha account-form">
+                <form action="{{ route('admin.referrals.add-ref') }}" method="POST" class="verify-gcaptcha account-form">
                     @csrf
                     <div class="row modal-body">
                         <div class="col-md-12">
                             <input type="hidden" value="1" name="registerReferer">
-                            <div class="form-group">
-                                <label for="select2-value-dropdown">
+                            <div class="form-group d-flex flex-column">
+                                <label class="d-block" for="searchInput">
                                     @lang('Username')
                                 </label>
-                                <select name="user_id" id="select2-value-dropdown">
-                                    @foreach(\App\Models\User::get() as $user)
-                                        <option value="{{$user->id}}">
-                                            {{$user->username}} ({{$user->id}})
-                                        </option>
+                                <input id="selectSearch" type="text" class="keyboard__key mb-3 border-1">
+                                <select name="user_id" id="select2-value-dropdown" size="7">
+                                    @foreach(\App\Models\User::with('referralStat')->get() as $user)
+                                        @if(!$user->referralStat)
+                                            <option value="{{$user->id}}">
+                                                {{$user->username}} ({{$user->id}})
+                                            </option>
+                                        @endif
                                     @endforeach
                                 </select>
                                 <small class="text-danger usernameExist"></small>
@@ -143,10 +159,27 @@
 @endsection
 @push('script')
     <script>
-        $(document).ready(function() {
-            $('#select2-value-dropdown').select2();
+        // $(document).ready(function() {
+        //     $('#select2-value-dropdown').select2();
+        // });
+
+        const searchInput = document.getElementById('selectSearch');
+        const searchItems = document.querySelectorAll('#select2-value-dropdown option');
+
+        searchInput.addEventListener('input', function(e) {
+            const val = e.target.value.trim().toUpperCase();
+
+            if (!e.target.classList.contains('keyboard__key')) return;
+
+            for (const elem of searchItems) {
+                const needShow = val !== '' && !elem.textContent.toUpperCase().includes(val);
+
+                elem.classList.toggle('hidden', needShow);
+            }
         });
+
     </script>
+
 {{--    <script>--}}
 {{--        "use strict";--}}
 {{--        (function($) {--}}

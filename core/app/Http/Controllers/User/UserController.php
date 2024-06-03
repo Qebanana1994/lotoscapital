@@ -16,6 +16,8 @@ use App\Models\Transaction;
 use App\Models\User;
 use App\Models\Withdrawal;
 use Carbon\Carbon;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -84,10 +86,14 @@ class UserController extends Controller
     {
         $ga        = new GoogleAuthenticator();
         $user      = auth()->user();
+        $site = str_replace(' ', '', gs('site_name'));
         $secret    = $ga->createSecret();
-        $qrCodeUrl = $ga->getQRCodeGoogleUrl($user->username . '@' . gs('site_name'), $secret);
+        $qr = QrCode::create("otpauth://totp/$user->username@$site?secret=$secret")
+            ->setSize(200);
+        $writer = new PngWriter();
+        $qrUrl = $writer->write($qr)->getDataUri();
         $pageTitle = '2FA Setting';
-        return view($this->activeTemplate . 'user.twofactor', compact('pageTitle', 'secret', 'qrCodeUrl'));
+        return view($this->activeTemplate . 'user.twofactor', compact('pageTitle', 'secret', 'qrUrl'));
     }
 
     public function create2fa(Request $request)

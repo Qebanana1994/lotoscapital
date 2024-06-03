@@ -15,7 +15,8 @@ class ProcessController extends Controller
         $nowPaymentsAcc = json_decode($deposit->gatewayCurrency()->gateway_parameter);
         $response       = CurlRequest::curlPostContent('https://api.nowpayments.io/v1/invoice', json_encode([
             'price_amount'     => $deposit->final_amo,
-            'price_currency'   => gs('cur_text'),
+            'price_currency'   => 'rub',
+            'pay_currency'     => $deposit->method_currency,
             'ipn_callback_url' => route('ipn.NowPaymentsCheckout'),
             'success_url'      => route(gatewayRedirectUrl(true)),
             'cancel_url'       => route(gatewayRedirectUrl(true)),
@@ -25,6 +26,7 @@ class ProcessController extends Controller
             "x-api-key: $nowPaymentsAcc->api_key",
             'Content-Type: application/json',
         ]);
+
         $response = json_decode($response);
 
         if (!$response) {

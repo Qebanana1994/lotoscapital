@@ -12,6 +12,7 @@ use App\Models\Withdrawal;
 use App\Models\WithdrawMethod;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Paykassa\PaykassaSCI;
 
 class WithdrawController extends Controller
 {
@@ -40,10 +41,14 @@ class WithdrawController extends Controller
         }
         $this->validate($request, [
             'method_code' => 'required',
+            'system' => 'nullable|string',
             'amount' => 'required|numeric',
         ]);
+
         $method = WithdrawMethod::where('id', $request->method_code)->where('status', 1)->firstOrFail();
+
         $user = auth()->user();
+
         if ($request->amount < $method->min_limit) {
             $notify[] = ['error', 'Your requested amount is smaller than minimum amount.'];
             return back()->withNotify($notify);
@@ -84,8 +89,9 @@ class WithdrawController extends Controller
     public function withdrawPreview()
     {
         $withdraw = Withdrawal::with('method', 'user')->where('trx', session()->get('wtrx'))->where('status', 0)->orderBy('id', 'desc')->firstOrFail();
+        $system = WithdrawMethod::query()->find($withdraw->method_id)->system;
         $pageTitle = 'Withdraw Preview';
-        return view($this->activeTemplate . 'user.withdraw.preview', compact('pageTitle', 'withdraw'));
+        return view($this->activeTemplate . 'user.withdraw.preview', compact('pageTitle', 'withdraw', 'system'));
     }
 
     public function withdrawSubmit(Request $request)

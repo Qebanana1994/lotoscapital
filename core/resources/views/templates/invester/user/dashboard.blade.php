@@ -3,6 +3,20 @@
 
     <div class="dashboard-inner">
 
+        @if ($user->unreadNotifications)
+            @foreach($user->unreadNotifications as $notification)
+                <div class="alert border border--{{ $notification->data['message_type'] }}" role="alert">
+                    <div class="alert__icon d-flex align-items-center text--{{ $notification->data['message_type'] }}"><i class="fas {{ $notification->data['icon'] }}"></i></div>
+                    <p class="alert__message">
+                        <span class="fw-bold">{{ $notification->data['title'] }}</span><br>
+                        <small>
+                            {{ $notification->data['body'] }}
+                        </small>
+                    </p>
+                </div>
+            @endforeach
+        @endif
+
         @if ($user->deposit_wallet <= 0 && $user->interest_wallet <= 0)
         <div class="alert border border--danger" role="alert">
             <div class="alert__icon d-flex align-items-center text--danger"><i class="fas fa-exclamation-triangle"></i></div>
@@ -123,12 +137,12 @@
                             <div class="col-4">
                                 <p class="fw-bold">В ожидании</p>
                                 <span>{{ $general->cur_sym }}{{ showAmount($pendingWithdrawals) }}</span>
-                            </div> 
+                            </div>
                             <div class="col-4">
                                 <p class="fw-bold">@lang('Rejected')</p>
                                 <span>{{ $general->cur_sym }}{{ showAmount($rejectedWithdrawals) }}</span>
-                            </div>  
-                        </div> 
+                            </div>
+                        </div>
 
                     </div> -->
                 </div>

@@ -109,10 +109,12 @@ class FormProcessor
                     $value = null;
                 }
             }
+
             $requestForm[] = [
-                'name'=>$data->name,
-                'type'=>$data->type,
-                'value'=>$value,
+                'name' => $data->name,
+                'type' => $data->type,
+                'system' => $request->system,
+                'value' => $value,
             ];
         }
         return $requestForm;

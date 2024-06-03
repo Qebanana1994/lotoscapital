@@ -65,7 +65,7 @@
                             </div>
                             <div class="content">
                                 <h6 class="trans-title">{{ __(keyToTitle($transaction->remark)) }} - {{ __(keyToTitle($transaction->wallet_type)) }}</h6>
-                                <span class="text-muted font-size--14px mt-2">{{showDateTime($transaction->created_at,'M d Y @g:i:a')}}</span>
+                                <span class="text-muted font-size--14px mt-2">{{showDateTime($transaction->created_at)}}</span>
                             </div>
                         </div>
                     </div>

@@ -68,7 +68,7 @@ class DepositController extends Controller
 
         $deposits = $deposits->searchable(['trx','user:username'])->dateFilter();
         $request = request();
-        
+
         //vai method
         if ($request->method) {
             $method   = Gateway::where('alias', $request->method)->firstOrFail();
@@ -110,11 +110,11 @@ class DepositController extends Controller
 
     public function approve($id)
     {
-        $deposit = Deposit::where('id', $id)->where('status', 2)->firstOrFail();
+        $deposit = Deposit::where('id', $id)->firstOrFail();
         PaymentController::userDataUpdate($deposit, true);
 
         $notify[] = ['success', 'Deposit request approved successfully'];
-        return to_route('admin.deposit.pending')->withNotify($notify);
+        return back()->withNotify($notify);
     }
 
     public function reject(Request $request)
@@ -142,5 +142,13 @@ class DepositController extends Controller
 
         $notify[] = ['success', 'Deposit request rejected successfully'];
         return to_route('admin.deposit.pending')->withNotify($notify);
+    }
+
+    public function statistics()
+    {
+        $pageTitle = 'Статистика вкладов';
+        $gateways = Gateway::with('deposits')->get();
+
+        return view('admin.deposit.statistics', compact('pageTitle', 'gateways'));
     }
 }

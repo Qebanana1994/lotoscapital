@@ -10,6 +10,9 @@ use Illuminate\Database\Eloquent\Model;
 class Deposit extends Model
 {
     use Searchable, ApiQuery;
+    protected $fillable = [
+        'status',
+    ];
     protected $casts = [
         'detail' => 'object',
     ];

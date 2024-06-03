@@ -17,7 +17,7 @@
                         + {{ $plan->interest_type != 1 ? $general->cur_sym : '' }}{{ showAmount($plan->interest) }}{{ $plan->interest_type == 1 ? '%' : '' }}
                     </h3>
                     <p> через 24 часа
-                        
+
                     </p>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                                 } else {
                                     $investAmo = $plan->fixed_amount;
                                 }
-                                
+
                                 if ($plan->lifetime == 0) {
                                     if ($plan->interest_type == 1) {
                                         $interestAmo = (($investAmo * $plan->interest) / 100) * $plan->repeat_time;
@@ -53,7 +53,7 @@
                                 } else {
                                     $interestAmo = 'Unlimited';
                                 }
-                                
+
                             @endphp
 
                             {{ $interestAmo }} @if ($plan->lifetime == 0)
@@ -123,7 +123,7 @@
                                 <div class="form-group">
                                     <label>Метод оплаты</label>
                                     <select class="form-control form--control form-select" name="wallet_type" required>
-                                        
+
                                         @if (auth()->user()->deposit_wallet > 0)
                                             <option value="deposit_wallet">@lang('Бонусный кошелек - ' . $general->cur_sym . showAmount(auth()->user()->deposit_wallet))</option>
                                         @endif

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Gateway\Freekassa\ProcessController as FreeKassa;
+use App\Http\Controllers\Gateway\Paykassa\ProcessController as Paykassa;
 use App\Models\Transaction;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
@@ -95,10 +96,21 @@ class WithdrawalController extends Controller
     {
         $request->validate(['id' => 'required|integer']);
         $withdraw                 = Withdrawal::where('id', $request->id)->where('status', 2)->with('user')->firstOrFail();
+
+        if ($withdraw->method_id !==  1) {
+            $paykassa = Paykassa::withdraw($withdraw, $request);
+
+            if ($paykassa['error']) {
+                $notify[] = ['error', $paykassa['message']];
+                return back()->withNotify($notify);
+            }
+        }
+
         if ($withdraw->method_id === 4) { //freekassa-auto
             $freekassa = new FreeKassa();
             $freekassa->withdraw($withdraw);
         }
+
         $withdraw->status         = 1;
         $withdraw->admin_feedback = $request->details;
         $withdraw->save();

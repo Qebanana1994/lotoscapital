@@ -5,13 +5,14 @@ namespace App\Models;
 use App\Traits\Searchable;
 use App\Traits\UserNotify;
 use Carbon\Carbon;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Searchable, UserNotify;
+    use HasApiTokens, Searchable, UserNotify, Notifiable;
 
     /**
      * The attributes that should be hidden for arrays.
@@ -24,10 +25,13 @@ class User extends Authenticatable
 
     protected $fillable = [
         'firstname',
+        'lastname',
         'username',
         'email',
+        'kv',
         'ev',
         'sv',
+        'profile_complete',
         'password',
         'created_at',
         'register-reference'
@@ -74,6 +78,11 @@ class User extends Authenticatable
         return $this->hasMany(User::class, 'ref_by');
     }
 
+    public function referralStat()
+    {
+        return $this->belongsTo(ReferralStat::class, 'id', 'user_id');
+    }
+
     public function activeReferrals()
     {
         return $this->hasMany(User::class, 'ref_by')->whereHas('invests');
@@ -82,6 +91,11 @@ class User extends Authenticatable
     public function allReferrals()
     {
         return $this->referrals()->with('referrer');
+    }
+
+    public function refTransactions()
+    {
+        return $this->hasMany();
     }
 
     public function invests()

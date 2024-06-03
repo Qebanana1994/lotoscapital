@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AdminNotification;
+use App\Models\Deposit;
 use App\Models\DeviceToken;
 use App\Models\Frontend;
 use App\Models\GatewayCurrency;
@@ -11,6 +12,7 @@ use App\Models\Page;
 use App\Models\Plan;
 use App\Models\Pool;
 use App\Models\ReferralStat;
+use App\Models\Statistic;
 use App\Models\Subscriber;
 use App\Models\SupportMessage;
 use App\Models\SupportTicket;

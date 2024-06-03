@@ -19,7 +19,7 @@
 
                     <div class="plan-name-data">
                         <div class="plan-name fw-bold">  через 24 часа
-                            
+
                         </div>
                         <div class="plan-desc">@lang('Invested'): <span class="fw-bold">{{ showAmount($invest->amount) }} {{ $general->cur_text }}</span> @if ($invest->capital_status)
                                     <br>Возврат: <span class="fw-bold">{{ showAmount(($invest->amount)+($invest->interest)) }} {{ $general->cur_text }} </span>
@@ -29,11 +29,11 @@
             </div>
             <div class="plan-start plan-inner-div">
                 <p class="plan-label">Открыт</p>
-                <p class="plan-value date">{{ showDateTime($invest->created_at, 'M d, Y h:i A') }}</p>
+                <p class="plan-value date">{{ showDateTime($invest->created_at) }}</p>
             </div>
             <div class="plan-inner-div">
                 <p class="plan-label">Закрытие</p>
-                <p class="plan-value">{{ showDateTime($invest->next_time, 'M d, Y h:i A') }}</p>
+                <p class="plan-value">{{ showDateTime($invest->next_time) }}</p>
             </div>
 <div class="plan-inner-div">
                 <p class="plan-label">Прибыль</p>
@@ -53,7 +53,7 @@
                 <a href="{{ route('user.invest.details', encrypt($invest->id)) }}" class="invest-details-link">
                     <i class="las la-angle-right"></i>
                 </a>
-               
+
             </div>
         </div>
     @empty

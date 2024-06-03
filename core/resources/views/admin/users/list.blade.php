@@ -2,6 +2,12 @@
 @section('panel')
     <div class="row">
         <div class="col-lg-12">
+            <div class="d-flex flex-wrap justify-content-end gap-2 align-items-right breadcrumb-plugins py-2">
+                <div class="flex-right">
+                    <button data-bs-toggle="modal" data-bs-target="#addUserQuick" class="btn btn--success btn--shadow w-100 btn-lg bal-btn" data-act="add">
+                        <i class="las la-plus-circle"></i>{{ __('Быстрое создание пользователя') }}</button>
+                </div>
+            </div>
             <div class="card b-radius--10 ">
                 <div class="card-body p-0">
                     <div class="table-responsive--md  table-responsive">
@@ -82,6 +88,59 @@
         </div>
 
 
+    </div>
+
+    <div id="addUserQuick" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span class="type"></span> <span>{{ __('Быстрое создание пользователя') }}</span></h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="las la-times"></i>
+                    </button>
+                </div>
+                <form action="{{ route('admin.users.quickcreate') }}" method="POST" class="verify-gcaptcha account-form">
+                    @csrf
+                    <div class="row modal-body">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="select2-value-dropdown">
+                                    {{ __('Имя') }}
+                                </label>
+                                <input class="form-control" type="text" name="firstname">
+                            </div>
+                            <div class="form-group">
+                                <label for="select2-value-dropdown">
+                                    {{ __('Фамилия') }}
+                                </label>
+                                <input class="form-control" type="text" name="lastname">
+                            </div>
+                            <div class="form-group">
+                                <label for="select2-value-dropdown">
+                                    {{ __('Имя пользователя') }}
+                                </label>
+                                <input class="form-control" type="text" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="select2-value-dropdown">
+                                    {{ __('Почта') }}
+                                </label>
+                                <input class="form-control" type="text" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="select2-value-dropdown">
+                                    {{ __('Пароль') }}
+                                </label>
+                                <input class="form-control" type="text" name="password">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn--primary h-45 w-100">Создать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 @endsection
 

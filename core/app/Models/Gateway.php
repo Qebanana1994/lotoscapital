@@ -12,7 +12,7 @@ class Gateway extends Model
     protected $hidden = [
         'gateway_parameters','extra'
     ];
-    
+
     protected $casts = [
         'status' => 'boolean',
         'code' => 'string',
@@ -24,6 +24,11 @@ class Gateway extends Model
     public function currencies()
     {
         return $this->hasMany(GatewayCurrency::class, 'method_code', 'code');
+    }
+
+    public function deposits()
+    {
+        return $this->hasMany(Deposit::class, 'method_code', 'code');
     }
 
     public function form()

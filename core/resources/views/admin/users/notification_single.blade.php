@@ -9,8 +9,33 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="form-group col-md-12">
-                                <label>@lang('Subject') </label>
-                                <input type="text" class="form-control" placeholder="@lang('Email subject')" name="subject"  required/>
+                                <label>{{ __('Заголовок') }}</label>
+                                <input type="text" class="form-control" placeholder="{{ __('Заголовок оповещения') }}" name="subject"  required/>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>{{ __('Тип оповещения') }}</label>
+                                <select name="message_type" class="form-control">
+                                    <option value="info">{{ __('Информация') }}</option>
+                                    <option value="warning">{{ __('Внимание') }}</option>
+                                    <option value="danger">{{ __('Предупреждение') }}</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>{{ __('Иконка') }}</label>
+                                <div role="radio" class="d-flex gap-3">
+                                    <div class="d-flex gap-2">
+                                        <input name="icon" type="radio" value="fa-info" checked>
+                                        <div class="fa fa-info"></div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <input name="icon" type="radio" value="fa-exclamation-circle">
+                                        <div class="fa fa-exclamation-circle"></div>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <input name="icon" type="radio" value="fa-exclamation-triangle">
+                                        <div class="fa fa-exclamation-triangle"></div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group col-md-12">
                                 <label>@lang('Message') </label>

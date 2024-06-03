@@ -6,25 +6,69 @@
                 <div class="card-body p-0">
                     <div class="table-responsive--sm table-responsive">
                         <table class="table table--light style--two">
-                            <thead>
-                            <tr>
-                                <th>@lang('User')</th>
-                                <th>@lang('Sent')</th>
-                                <th>@lang('Sender')</th>
-                                <th>@lang('Subject')</th>
-                                <th>@lang('Action')</th>
-                            </tr>
-                            </thead>
-                            <tbody>
+                            @if ($user->unreadNotifications->count())
+                                <thead>
+                                <tr>
+                                    <th>@lang('User')</th>
+                                    <th>@lang('Sent')</th>
+                                    <th>{{ __('Заголовок') }}</th>
+                                    <th>{{ __('Сообщение') }}</th>
+                                    <th>{{ __('Тип') }}</th>
+                                    <th>{{ __('Действие') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @forelse($user->unreadNotifications as $notification)
+                                    <tr>
+                                        <td>
+                                            <span class="fw-bold">{{ $user->fullname }}</span>
+                                            <br>
+                                            <span class="small">
+                                                    <a href="{{ route('admin.users.detail', $user->id) }}"><span>@</span>{{ $user->username }}</a>
+                                                </span>
+                                        </td>
+                                        <td>
+                                            {{ showDateTime($notification->created_at) }}
+                                            <br>
+                                            {{ $notification->created_at->diffForHumans() }}
+                                        </td>
+                                        <td>{{ __($notification->data['title']) }}</td>
+                                        <td>{{ __($notification->data['body']) }}</td>
+                                        <td>{{ __($notification->data['message_type']) }}</td>
+                                        <td>
+                                            <form method="POST" action="{{ route('admin.users.notification.single.destroy', $notification->id) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-outline--danger">{{ __('Удалить') }}</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td class="text-muted text-center" colspan="100%">{{ __($emptyMessage) }}</td>
+                                    </tr>
+                                @endforelse
+                                </tbody>
+                            @elseif($logs->count())
+                                <thead>
+                                <tr>
+                                    <th>@lang('User')</th>
+                                    <th>@lang('Sent')</th>
+                                    <th>@lang('Sender')</th>
+                                    <th>@lang('Subject')</th>
+                                    <th>@lang('Action')</th>
+                                </tr>
+                                </thead>
+                                <tbody>
                                 @forelse($logs as $log)
                                     <tr>
                                         <td>
                                             @if($log->user)
-                                            <span class="fw-bold">{{ $log->user->fullname }}</span>
+                                                <span class="fw-bold">{{ $log->user->fullname }}</span>
                                                 <br>
-                                            <span class="small">
-                                                <a href="{{ route('admin.users.detail', $log->user_id) }}"><span>@</span>{{ $log->user->username }}</a>
-                                            </span>
+                                                <span class="small">
+                                                    <a href="{{ route('admin.users.detail', $log->user_id) }}"><span>@</span>{{ $log->user->username }}</a>
+                                                </span>
                                             @else
                                                 <span class="fw-bold">@lang('System')</span>
                                             @endif
@@ -47,7 +91,12 @@
                                         <td class="text-muted text-center" colspan="100%">{{ __($emptyMessage) }}</td>
                                     </tr>
                                 @endforelse
-                            </tbody>
+                                </tbody>
+                            @else
+                                <tr>
+                                    <td class="text-muted text-center" colspan="100%">{{ __($emptyMessage) }}</td>
+                                </tr>
+                            @endif
                         </table><!-- table end -->
                     </div>
                 </div>

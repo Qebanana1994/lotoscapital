@@ -54,12 +54,14 @@ class HyipLab
      * @param string $wallet
      * @return void
      */
-    public function invest($amount, $wallet, $compoundTimes = 0)
+    public function invest($amount, $wallet, $compoundTimes = 0, $increaseBalance = true)
     {
         $plan = $this->plan;
         $user = $this->user;
 
-        $user->$wallet -= $amount;
+        if ($increaseBalance) {
+            $user->$wallet -= $amount;
+        }
         $user->total_invests += $amount;
         $user->save();
 

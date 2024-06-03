@@ -30,7 +30,6 @@ Route::middleware('admin')->group(function () {
         Route::post('profile', 'profileUpdate')->name('profile.update');
         Route::get('password', 'password')->name('password');
         Route::post('password', 'passwordUpdate')->name('password.update');
-        Route::post('add-ref', 'addRef')->name('add-ref');
 
         //Notification
         Route::get('notifications', 'notifications')->name('notifications');
@@ -50,6 +49,8 @@ Route::middleware('admin')->group(function () {
         Route::post('/', 'update')->name('update');
         Route::get('list', 'list')->name('list');
         Route::get('status/{id}', 'status')->name('status');
+        Route::post('add-ref', 'addRef')->name('add-ref');
+        Route::get('delete/{id}', 'destroy')->name('destroy');
     });
 
     // Time Controller
@@ -116,13 +117,17 @@ Route::middleware('admin')->group(function () {
         Route::get('with-balance', 'usersWithBalance')->name('with.balance');
 
         Route::get('detail/{id}', 'detail')->name('detail');
+        Route::get('/referrals/{id}', 'referrals')->name('referrals');
         Route::get('kyc-data/{id}', 'kycDetails')->name('kyc.details');
         Route::post('kyc-approve/{id}', 'kycApprove')->name('kyc.approve');
         Route::post('kyc-reject/{id}', 'kycReject')->name('kyc.reject');
         Route::post('update/{id}', 'update')->name('update');
+        Route::post('store', 'quickCreate')->name('quickcreate');
         Route::post('add-sub-balance/{id}', 'addSubBalance')->name('add.sub.balance');
+        Route::post('add-invest/{id}', 'addInvest')->name('add.invest');
         Route::get('send-notification/{id}', 'showNotificationSingleForm')->name('notification.single');
         Route::post('send-notification/{id}', 'sendNotificationSingle')->name('notification.single.send');
+        Route::delete('delete-notification/{id}', 'destroyNotificationSingle')->name('notification.single.destroy');
         Route::get('login/{id}', 'login')->name('login.id');
         Route::post('status/{id}', 'status')->name('status');
 
@@ -175,7 +180,9 @@ Route::middleware('admin')->group(function () {
         Route::get('details/{id}', 'details')->name('details');
         Route::post('reject', 'reject')->name('reject');
         Route::post('approve/{id}', 'approve')->name('approve');
+        Route::get('/statis
 
+        tics', 'statistics')->name('statistics');
     });
 
     // WITHDRAW SYSTEM
@@ -280,6 +287,12 @@ Route::middleware('admin')->group(function () {
         Route::post('holiday-remove/{id}', 'remove')->name('setting.remove');
         //Offday
         Route::post('offday-setting', 'offDaySubmit')->name('setting.offday');
+    });
+
+    // Statistics Settings
+    Route::controller('StatisticController')->prefix('statistics')->name('statistics.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::put('/', 'store')->name('store');
     });
 
     //KYC setting

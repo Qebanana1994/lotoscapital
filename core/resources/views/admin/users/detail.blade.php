@@ -81,10 +81,12 @@
                             <i class="las la-ticket-alt"></i>
                         </div>
                         <div class="widget-two__content">
-                            <h3 class="text-white">{{ $pendingTicket }}</h3>
+                            <h3 class="text-white">{{ $totalReferrals }} ({{ $totalReferralsDeposit }})</h3>
                             <p class="text-white">Рефералов</p>
                         </div>
-                        <a href="{{ route('admin.ticket.pending') }}?search={{ $user->username }}" class="widget-two__btn">показать все</a>
+                        @if($totalReferrals)
+                            <a href="{{ route('admin.users.referrals', $user->id) }}" class="widget-two__btn">показать все</a>
+                        @endif
                     </div>
                 </div>
                 <!-- dashboard-w1 end -->
@@ -94,7 +96,13 @@
             <div class="d-flex flex-wrap gap-3 mt-4">
                 <div class="flex-fill">
                     <button data-bs-toggle="modal" data-bs-target="#addSubModal" class="btn btn--success btn--shadow w-100 btn-lg bal-btn" data-act="add">
-                        <i class="las la-plus-circle"></i> Пополнить 
+                        <i class="las la-plus-circle"></i> Пополнить
+                    </button>
+                </div>
+
+                <div class="flex-fill">
+                    <button data-bs-toggle="modal" data-bs-target="#addDepositModal" class="btn btn-primary btn--gradi btn--shadow w-100 btn-lg bal-btn" data-act="add">
+                        <i class="las la-chevron-circle-up"></i> Открыть вклад
                     </button>
                 </div>
 
@@ -190,7 +198,7 @@
                             <div class="col-md-12">
                                 <div class="form-group ">
                                     <label>Новый пароль</label>
-                                    <input class="form-control" type="text" name="address" value="{{@$user->address->address}}">
+                                    <input class="form-control" type="text" name="password" value="{{@$user->address->address}}">
                                 </div>
                             </div>
                         </div>
@@ -233,6 +241,13 @@
                                             <option data-mobile_code="{{ $country->dial_code }}" value="{{ $key }}">{{ __($country->country) }}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="form-group ">
+                                    <label>@lang('Upline')</label>
+                                    <input name="refBy" class="form-control" value="{{ $refBy->username ?? '' }}" type="text">
                                 </div>
                             </div>
                         </div>
@@ -282,6 +297,44 @@
     </div>
 
 
+
+    {{-- Add Deposit MODAL --}}
+    <div id="addDepositModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span class="type"></span> <span>@lang('Invest')</span></h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="las la-times"></i>
+                    </button>
+                </div>
+                <form action="{{ route('admin.users.add.invest', $user->id) }}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>@lang('Amount')</label>
+                            <div class="input-group">
+                                <input type="number" step="any" name="amount" class="form-control" placeholder="@lang('Please provide positive amount')" required>
+                                <div class="input-group-text">{{ __($general->cur_text) }}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>@lang('Deposit Type')</label>
+                            <select name="plan_type" class="form-control" required>
+                                <option value="" hidden>@lang('Select One')</option>
+                                <option value="1">15%</option>
+                                <option value="2">30%</option>
+                                <option value="3">50%</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn--primary h-45 w-100">@lang('Оформить')</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     {{-- Add Sub Balance MODAL --}}
     <div id="addSubModal" class="modal fade" tabindex="-1" role="dialog">

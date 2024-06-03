@@ -1,3 +1,4 @@
+@props(['system' => ''])
 @foreach($formData as $data)
     <div class="form-group">
         <label class="form-label">{{ __($data->name) }}
@@ -10,6 +11,9 @@
             value="{{ old($data->label) }}"
             @if($data->is_required == 'required') required @endif
             >
+        @if(!empty($system))
+                <input name="system" type="hidden" value="{{ $system }}">
+        @endif
         @elseif($data->type == 'textarea')
             <textarea
                 class="form-control form--control"

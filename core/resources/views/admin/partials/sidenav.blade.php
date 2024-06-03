@@ -81,6 +81,13 @@
                                     <span class="menu-title">Все пополнения</span>
                                 </a>
                             </li>
+
+                            <li class="sidebar-menu-item {{ menuActive('admin.deposit.statistics') }} ">
+                                <a href="{{ route('admin.deposit.statistics') }}" class="nav-link">
+                                    <i class="menu-icon las la-dot-circle"></i>
+                                    <span class="menu-title">Статистика</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -98,7 +105,7 @@
                     <div class="sidebar-submenu {{ menuActive('admin.withdraw*', 2) }} ">
                         <ul>
 
-                            
+
 
                             <li class="sidebar-menu-item {{ menuActive('admin.withdraw.pending') }} ">
                                 <a href="{{ route('admin.withdraw.pending') }}" class="nav-link">
@@ -149,7 +156,7 @@
                         @endif
                     </a>
                     <div class="sidebar-submenu {{ menuActive('admin.users*', 2) }} ">
-                        <ul> 
+                        <ul>
                             <li class="sidebar-menu-item {{ menuActive('admin.users.all') }} ">
                                 <a href="{{ route('admin.users.all') }}" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
@@ -176,7 +183,7 @@
                                         <span class="menu-badge pill bg--danger ms-auto">{{ $bannedUsersCount }}</span>
                                     @endif
                                 </a>
-                            </li> <!-- 
+                            </li> <!--
 
                             <li class="sidebar-menu-item  {{ menuActive('admin.users.email.unverified') }}">
                                 <a href="{{ route('admin.users.email.unverified') }}" class="nav-link">
@@ -217,7 +224,7 @@
                                         <span class="menu-badge pill bg--danger ms-auto">{{ $kycPendingUsersCount }}</span>
                                     @endif
                                 </a>
-                            </li> 
+                            </li>
 
                             <li class="sidebar-menu-item {{ menuActive('admin.users.notification.all') }}">
                                 <a href="{{ route('admin.users.notification.all') }}" class="nav-link">
@@ -311,7 +318,7 @@
                 </li>
 
 
-              
+
 
                 @if ($general->staking_option)
                     <li class="sidebar-menu-item sidebar-dropdown">
@@ -363,7 +370,7 @@
                     </li>
                 @endif
 
-                
+
 
                 <li class="sidebar-menu-item {{ menuActive('admin.referrals.list') }}">
                     <a href="{{ route('admin.referrals.list') }}" class="nav-link ">
@@ -388,7 +395,7 @@
                     </a>
                 </li> -->
 
-                
+
  <!--
                 <li class="sidebar-menu-item  {{ menuActive('admin.subscriber.*') }}">
                     <a href="{{ route('admin.subscriber.index') }}" class="nav-link" data-default-url="{{ route('admin.subscriber.index') }}">
@@ -462,6 +469,13 @@
                     <a href="{{ route('admin.setting.index') }}" class="nav-link">
                         <i class="menu-icon las la-life-ring"></i>
                         <span class="menu-title">@lang('General Setting')</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item {{ menuActive('admin.statistics.index') }}">
+                    <a href="{{ route('admin.statistics.index') }}" class="nav-link">
+                        <i class="menu-icon las la-chart-bar"></i>
+                        <span class="menu-title">@lang('Statistics')</span>
                     </a>
                 </li>
 

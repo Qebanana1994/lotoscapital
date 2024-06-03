@@ -74,7 +74,7 @@
                                         <td>
  @if($details != null)
                         @foreach(json_decode($details) as $val)
-                            
+
                                     <h6>{{__(@$val->name)}}</h6>
                                     @if($val->type == 'checkbox')
                                         {{ implode(',', @$val->value ?? []) }}
@@ -87,7 +87,7 @@
                                     @else
                                     <p><strong>{{__(@$val->value)}}</strong></p>
                                     @endif
-                                
+
                         @endforeach
                     @endif
                                         </td>

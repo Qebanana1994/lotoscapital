@@ -31,12 +31,12 @@ class ReferralController extends Controller
     public function list () {
 
         $pageTitle       = 'Manage Referral';
-        $referrals = ReferralStat::with(['user','refTransactions'])->paginate();
+        $referrals = ReferralStat::with(['user'])->paginate();
         $info = json_decode(json_encode(getIpInfo()), true);
         $mobileCode = @implode(',', $info['code']);
         $countries = json_decode(file_get_contents(resource_path('views/partials/country.json')));
 
-        return view('admin.referral.list', compact('pageTitle','referrals', 'mobileCode', 'countries'));
+        return view('admin.referral.list', compact('pageTitle', 'referrals', 'mobileCode', 'countries'));
     }
 
     public function update(Request $request)
@@ -59,6 +59,38 @@ class ReferralController extends Controller
         }
 
         $notify[] = ['success', 'Referral commission setting updated successfully'];
+        return back()->withNotify($notify);
+    }
+
+    public function addRef(Request $request)
+    {
+        $request->validate([
+            "registerReferer" => ['required', 'int'],
+            "user_id" => ['required', 'int', 'unique:referral_stats'],
+        ]);
+
+        $create = ReferralStat::query()->create([
+            'user_id' => $request->user_id,
+            'hitCount' => 0,
+        ]);
+
+        if (!$create) {
+            $notify[] = ['error', 'An error occurred when adding Referer'];
+            return back()->withNotify($notify);
+        }
+
+        $notify[] = ['success', 'Referer successfully added!'];
+        return back()->withNotify($notify);
+    }
+
+    public function destroy($id)
+    {
+        $referer = ReferralStat::query()->findOrFail($id);
+
+        $referer->delete();
+
+        $notify[] = ['success', 'Referer successfully deleted!'];
+
         return back()->withNotify($notify);
     }
 }

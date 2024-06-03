@@ -49,7 +49,7 @@ class Push extends NotifyProcess implements Notifiable{
         }
 
         return 'HOME';
-    } 
+    }
 
 
     /**
@@ -57,9 +57,9 @@ class Push extends NotifyProcess implements Notifiable{
     *
     * @return void|bool
     */
-	public function send(){ 
+	public function send(){
 		//get message from parent
-		$message = $this->getMessage(); 
+		$message = $this->getMessage();
         if ($this->setting->push_notify && $message) {
             try{
                 $data = [
@@ -75,9 +75,9 @@ class Push extends NotifyProcess implements Notifiable{
                         'for_app'=>$this->redirectForApp($this->templateName)
                     ]
                 ];
-               
+
                 $dataString = json_encode($data);
-            
+
                 $headers = [
                     'Authorization:key=' . $this->setting->firebase_config->serverKey,
                     'Content-Type: application/json',

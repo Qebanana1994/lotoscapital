@@ -7,6 +7,21 @@ Route::get('/clear', function () {
 });
 
 Route::get('cron', 'CronController@cron')->name('cron');
+Route::get('updateStatistics', 'CronController@updateStatistics')->name('updateStatistics')->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class);
+
+Route::controller('Gateway\Paykassa\PaykassaController')->prefix('paykassa')->name('paykassa.')->group(function() {
+    Route::post('invoice', 'invoice')
+        ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class)
+        ->name('invoice');
+
+    Route::get('success/{id}', 'success')->name('success');
+
+    Route::get('fail', 'fail')->name('fail');
+
+    Route::post('transaction', 'transaction')
+        ->withoutMiddleware(\App\Http\Middleware\VerifyCsrfToken::class)
+        ->name('transaction');
+});
 
 // User Support Ticket
 Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(function () {

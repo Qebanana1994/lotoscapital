@@ -165,19 +165,31 @@
                       <p>Старт проекта</p>
                   </div>
                 <div class="banner__counter-item">
-                  <h4> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10">10</span> Дней
+                    @php
+                        $users = \App\Models\Statistic::getCountUsers();
+                        $usersInfo = \App\Models\Statistic::getUsersInfo()
+                    @endphp
+                  <h4> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $users }}"></span> {{ $usersInfo->title }}
                   </h4>
-                  <p>Работы</p>
+                  <p>{{ $usersInfo->desc }}</p>
                 </div>
                 <div class="banner__counter-item">
-                  <h4> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="2444">2444</span> Чел.
-                  </h4>
-                  <p>Клиентов</p>
+                    @php
+                        $deposits = \App\Models\Statistic::getAmountDeposits();
+                        $depositsInfo = \App\Models\Statistic::getDepositsInfo();
+                    @endphp
+                    <h4> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $deposits }}"></span> {{ gs()->cur_sym }} {{ $depositsInfo->title }}
+                    </h4>
+                  <p>{{ $depositsInfo->desc }}</p>
                 </div>
                 <div class="banner__counter-item">
-                  <h4> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="25000">25000</span> $
+                    @php
+                        $withdraws = \App\Models\Statistic::getAmountWithdraws();
+                        $withdrawsInfo = \App\Models\Statistic::getWithdrawsInfo();
+                    @endphp
+                  <h4> <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $withdraws }}"></span> {{ gs()->cur_sym }} {{ $withdrawsInfo->title }}
                   </h4>
-                  <p>Торговый оборот</p>
+                  <p>{{ $withdrawsInfo->desc }}</p>
                 </div>
               </div>
             </div>
