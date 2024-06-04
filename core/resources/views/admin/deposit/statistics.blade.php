@@ -16,7 +16,7 @@
                             @foreach($gateways as $gateway)
                                 <tr>
                                     <td><span class="font-weight-600">{{ $gateway->alias }}</span></td>
-                                    <td><span class="font-weight-600">{{ $gateway->deposits->count() }}</span></td>
+                                    <td><span class="font-weight-600">{{ $gateway->deposits->where('status', 1)->sum('amount') }} {{ gs('cur_sym') }}</span></td>
                                 </tr>
                             @endforeach
                         </tbody>
