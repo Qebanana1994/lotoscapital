@@ -103,8 +103,13 @@ function getTrx($length = 12)
 
 function getAmount($amount, $length = 2)
 {
-    $amount = round($amount ?? 0, $length);
-    return $amount + 0;
+    $amountRound = round($amount ?? 0, $length);
+
+    if ($amountRound) {
+        return $amountRound + 0;
+    }
+
+    return $amount;
 }
 
 function showAmount($amount, $decimal = 2, $separate = true, $exceptZeros = false)
